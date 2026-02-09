@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Recommendations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            width: 60%;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .message {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            background: #e8f0ff;
+            margin: 10px auto;
+            padding: 12px;
+            border-radius: 8px;
+            width: 70%;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        a:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Entered Product -->
+        <h2>You Entered: {{ product_name }}</h2>
+
+        <!-- Show message ONLY if product not found -->
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <!-- Recommendations -->
+        <h2>Recommended Products:</h2>
+
+        <ul>
+            {% for item in recommendations %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Back Button -->
+        <a href="/">Try Another Product</a>
+
+    </div>
+
+</body>
+</html>
+
