@@ -81,4 +81,4 @@ This improves transparency and user trust.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/Smart-Product-Recommendation-Engine.git
+git clone https://github.com/gadhaspanicker/Smart-Product-Recommendation-Engine.git
